@@ -1,16 +1,19 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Deck {
 
-	private ArrayList<Card> deck;
+	public ArrayList<Card> deck;
 	private Card tarotCard;
-
-	void createDeck() {
+	
+	/**
+	 * Creates a deck of tarot cards.
+	 */
+	Deck() {
 
 		tarotCard = new Card("The Fool", "The Fool is a card of new beginnings, " 
 				+ "opportunity and potential. Just like the young man, "
-				+ "you are at the outset of your journey, " + "standing at the cliff‘s edge, and about to take "
+				+ "you are at the outset of your journey, " 
+				+ "standing at the cliff‘s edge, and about to take "
 				+ "your first step into the unknown. Even though you "
 				+ "don’t know exactly where you are going, you are being "
 				+ "called to commit yourself and follow your heart, no "
@@ -19,7 +22,8 @@ public class Deck {
 				+ "is taking you.");
 		deck.add(tarotCard);
 
-		tarotCard = new Card("The Magician", "As a master manifestor, the " + "Magician brings you the tools,"
+		tarotCard = new Card("The Magician", "As a master manifestor, the " 
+				+ "Magician brings you the tools,"
 				+ " resources and energy you need to make your dreams come true. Seriously, everything "
 				+ "you need right now is at your fingertips. You have the spiritual "
 				+ "(fire), physical (earth), mental (air) and emotional (water) resources "
@@ -79,13 +83,105 @@ public class Deck {
 				+ "you will succeed."); 
 		deck.add(tarotCard);
 		
+		tarotCard = new Card("Strength", "The Strength card represents strength, determination, and power – like the Chariot. However, while the Chariot "
+				+ "signifies outer strength and will, the Strength card speaks to the inner strength and the human spirit's ability to overcome any obstacle. "
+				+ "Strength is about knowing you can endure life’s obstacles. You have great stamina and persistence, balanced with underlying patience and inner "
+				+ "calm. You are committed to what you need to do, and you go about it in a way that shows your composure and maturity.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The Hermit", "The Hermit shows that you are taking a break from everyday life to draw your energy and attention inward and find the answers "
+				+ "you seek, deep within your soul. You realise that your most profound sense of truth and knowledge is within yourself and not in the distractions of the "
+				+ "outside world. You leave behind the mundane to set off on a journey of self-discovery, led only by your inner wisdom and guiding light. Now is the perfect "
+				+ "time to go on a weekend retreat or sacred pilgrimage, anything in which you can contemplate your motivations, personal values and principles, and get closer to "
+				+ "your authentic self.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The Wheel of Fortune", "The Wheel of Fortune reminds you that the wheel is always turning and life is in a state of constant change. If you’re going "
+				+ "through a difficult time rest assured that it will get better from here. Good luck and good fortune will make their return in time. Similarly, if things are "
+				+ "going well, know this, too, will change and life may return to ‘normal’ soon. This cycle shows why it is so important to cherish the blissful moments in your "
+				+ "life and make the most of them while they are within reach – because in a flash they could be gone.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("Justice" , "The Justice card represents justice, fairness, truth and the law. You are being called to account for your actions and will be judged "
+				+ "accordingly. If you have acted in alignment with your Higher Self and for the greater good of others, you have nothing to worry about. However, if you haven’t,"
+				+ " you will be called out and made to own up to your actions. If this has you shaking in your boots, know that the Justice card isn’t as black and white as you "
+				+ "may think. A level of compassion and understanding accompany Justice, and although you may have done something you regret, this card suggests that you will be "
+				+ "treated fairly and without bias. Be ready to take responsibility for your actions and stand accountable for the ensuing consequences.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The Hanged Man", "The Hanged Man reminds you that sometimes you have to put everything on hold before you can take the next step, or the Universe "
+				+ "will do it on your behalf (and it may not always be at the most convenient time!). You may have heard the saying, ‘What got you here won’t get you there’, and "
+				+ "that indeed is at play in this card. The Hanged Man calls you to release the old mental models and behavioural patterns that no longer serve you so you can see "
+				+ "your world from a new perspective and embrace new opportunities that would have otherwise been hidden from you if you didn’t hit the brakes.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("Death", "After a period of pause and reflection with the Hanged Man, the Death card symbolises the end of a major phase or aspect of your life that you "
+				+ "realise is no longer serving you, opening up the possibility of something far more valuable and essential. You must close one door to open another. You need to put "
+				+ "the past behind you and part ways, ready to embrace new opportunities and possibilities. It may be difficult to let go of the past, but you will soon see its importance "
+				+ "and the promise of renewal and transformation. If you resist these necessary endings, you may experience pain, both emotionally and physically, but if you exercise your "
+				+ "imagination and visualise a new possibility, you allow more constructive patterns to emerge.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("Temperance", "Temperance is the card for bringing balance, patience and moderation into your life. You are being invited to stabilise your energy and "
+				+ "to allow the life force to flow through you without force or resistance. It’s time to recover your flow and get your life back into order and balance.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The Devil", "The Devil card represents your shadow (or darker) side and the negative forces that constrain you and hold you back from being the best "
+				+ "version of yourself. You may be at the effect of negative habits, dependencies, behaviours, thought patterns, relationships, and addictions. You have found yourself "
+				+ "trapped between the short-term pleasure you receive and the longer-term pain you experience. Just as the Lovers card speaks to duality and choice, so too does the Devil; "
+				+ "however, with the Devil, you are choosing the path of instant gratification, even if it is at the expense of your long-term well-being. In effect, you have sold your "
+				+ "soul to the devil!");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The Tower", "When the Tower card appears in a Tarot reading, expect the unexpected – massive change, upheaval, destruction and chaos. It may be a divorce, "
+				+ "death of a loved one, financial failure, health problems, natural disaster, job loss or any event that shakes you to your core, affecting you spiritually, mentally and "
+				+ "physically. There’s no escaping it. Change is here to tear things up, create chaos and destroy everything in its path (but trust me, it’s for your Highest Good).");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The Star", "As the Star follows the Tower card in the Tarot, it comes as a welcome reprieve after a period of destruction and turmoil. You have endured many "
+				+ "challenges and stripped yourself bare of any limiting beliefs that have previously held you back. You are realising your core essence, who you are beneath all the layers. "
+				+ "No matter what life throws your way, you know that you are always connected to the Divine and pure loving energy. You hold a new sense of self, a new appreciation for the "
+				+ "core of your Being.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The Moon", "The Moon represents your fears and illusions and often comes out when you are projecting fear into your present and your future, based on your past "
+				+ "experiences. You may have a painful memory that caused emotional distress, and rather than dealing with the emotions you pushed them down deep into your subconscious. Now, "
+				+ "these emotions are making a reappearance, and you may find yourself under their influence on a conscious or subconscious level. For example, if you had a car accident when "
+				+ "you were young but didn’t deal with the emotions, you may get sad or anxious every time you get into the backseat of a car. To remedy this, connect with your subconscious "
+				+ "mind and release any fears or anxieties holding you back. Hypnosis, therapy and shamanic healing can support this process.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The Sun", "The Sun represents success, radiance and abundance. The Sun gives you strength and tells you that no matter where you go or what you do, your positive "
+				+ "and radiant energy will follow you and bring you happiness and joy. People are drawn to you because you can always see the bright side and bring such warmth into other people’s "
+				+ "lives. This beautiful, warm energy is what will get you through the tough times and help you succeed. You are also in a position where you can share your highest qualities and "
+				+ "achievements with others. Radiate who you are and what you stand for; shine your love on those you care about.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("Judgement", "The Judgement card is calling you to rise up and embrace a higher level of consciousness for the service of your Highest Good. You are experiencing a "
+				+ "spiritual awakening and realising that you are destined for so much more. This is your cosmic up-levelling! You hear the call and are ready to act. Tune in to a higher "
+				+ "frequency. Let go of your old self and step into this newest version of who you really are.");
+		deck.add(tarotCard);
+		
+		tarotCard = new Card("The World", "When the World card appears in a Tarot reading, you are glowing with a sense of wholeness, achievement, fulfilment and completion. A long-term project, "
+				+ "period of study, relationship or career has come full circle, and you are now revelling in the sense of closure and accomplishment. This card could represent graduation, a "
+				+ "marriage, the birth of a child or achieving a long-held dream or aspiration. You have finally accomplished your goal or purpose. Everything has come together, and you are "
+				+ "in the right place, doing the right thing, achieving what you have envisioned. You feel whole and complete.");
+		deck.add(tarotCard);
 	}
 
-	void shuffleDeck() {
-		Collections.shuffle(deck);
-	}
-
+	/**
+	 * Gets the card object.
+	 * @param pos The position of the card in the deck.
+	 * @return The card object from the deck.
+	 */
 	Card getCard(int pos) {
 		return deck.get(pos);
+	}
+	
+	/**
+	 * @return Returns the deck object for manipulation in other classes.
+	 */
+	ArrayList<Card> getDeck(){
+		return deck; 
 	}
 }
