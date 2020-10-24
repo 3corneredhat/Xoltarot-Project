@@ -21,6 +21,4 @@ public class MainItemsController {
 	private void goNotes() throws IOException{
 		main.showNotesScene();
 	}
-	@FXML
-	public Button closeButton;
 }	
