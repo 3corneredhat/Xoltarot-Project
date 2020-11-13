@@ -22,4 +22,20 @@ public class TodayFortController {
 		window.setScene(scene);
 		window.show();
 	}
+	//when the save button is pressed it should save the displayed fortune
+	//for now it alerts the user that their fortune is being saved
+	@FXML
+	private void saveFort(ActionEvent event){
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setContentText("Your fortune is being saved");
+		alert.showAndWait();
+	}
+	//When the generate my fortune button is pressed, three "cards" should be displayed
+	//for now it alerts the user that their fortune is being generated
+	@FXML
+	private void genFort(ActionEvent event){
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setContentText("Your fortune is being generated");
+		alert.showAndWait();
+	}
 }
