@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ;" stylesheets="@xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.MyNotesController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.MyNotesController">
    <children>
-      <Label layoutX="251.0" layoutY="14.0" text="My Notes">
+      <Label layoutX="426.0" layoutY="14.0" text="My Notes">
          <font>
-            <Font name="Bell MT" size="24.0" />
+            <Font name="Bell MT" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="14.0" layoutY="330.0" mnemonicParsing="false" onAction="#Home" text="Home">
+      <Button layoutX="14.0" layoutY="528.0" mnemonicParsing="false" onAction="#Home" text="Home">
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
