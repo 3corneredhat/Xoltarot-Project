@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,18 +8,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ;" stylesheets="@xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.MainController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.MainController">
    <children>
-      <VBox layoutX="200.0" prefHeight="400.0" prefWidth="200.0">
+      <VBox layoutX="400.0" layoutY="103.0" prefHeight="497.0" prefWidth="200.0">
          <children>
-            <Label text="Xoltarot">
-               <font>
-                  <Font name="Bell MT" size="36.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="35.0" top="10.0" />
-               </VBox.margin>
-            </Label>
             <Button mnemonicParsing="false" onAction="#TodayFort" text="Today's Fortune">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -35,7 +28,7 @@
                   <Insets bottom="20.0" left="36.0" right="36.0" top="20.0" />
                </padding>
                <VBox.margin>
-                  <Insets left="20.0" top="20.0" />
+                  <Insets left="20.0" top="60.0" />
                </VBox.margin>
                <font>
                   <Font size="18.0" />
@@ -46,7 +39,7 @@
                   <Insets bottom="20.0" left="48.0" right="48.0" top="20.0" />
                </padding>
                <VBox.margin>
-                  <Insets left="20.0" top="20.0" />
+                  <Insets left="20.0" top="60.0" />
                </VBox.margin>
                <font>
                   <Font size="18.0" />
@@ -60,10 +53,15 @@
                   <Insets bottom="20.0" left="71.0" right="71.0" top="20.0" />
                </padding>
                <VBox.margin>
-                  <Insets left="20.0" top="20.0" />
+                  <Insets left="20.0" top="60.0" />
                </VBox.margin>
             </Button>
          </children>
       </VBox>
+      <Label alignment="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="100.0" prefWidth="963.0" stylesheets="@xoltarot.css" text="Xoltarot">
+         <font>
+            <Font name="Bell MT" size="36.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
