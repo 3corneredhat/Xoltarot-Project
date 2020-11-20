@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="750.0" prefWidth="1000.0"
+	stylesheets="@xoltarot.css" xmlns:fx="http://javafx.com/fxml/1"
+	xmlns="http://javafx.com/javafx/8"
+	fx:controller="xoltarot.HelpController">
+	<children>
+		<Label alignment="CENTER" layoutX="22.0" layoutY="14.0"
+			prefHeight="100.0" prefWidth="963.0" stylesheets="@xoltarot.css"
+			text="Help">
+			<font>
+				<Font name="Bell MT" size="36.0" />
+			</font>
+		</Label>
+		<Button layoutX="53.0" layoutY="670.0" mnemonicParsing="false" onAction="#Home" text="Home">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Button>
+	</children>
+</AnchorPane>
