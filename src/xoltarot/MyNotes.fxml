@@ -7,17 +7,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.MyNotesController">
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.MyNotesController">
    <children>
-      <Label layoutX="426.0" layoutY="14.0" text="My Notes">
-         <font>
-            <Font name="Bell MT" size="36.0" />
-         </font>
-      </Label>
-      <Button layoutX="14.0" layoutY="528.0" mnemonicParsing="false" onAction="#Home" text="Home">
+      <Label alignment="CENTER" layoutX="22.0" layoutY="14.0"
+			prefHeight="100.0" prefWidth="963.0" stylesheets="@xoltarot.css"
+			text="Past Fortunes">
+			<font>
+				<Font name="Bell MT" size="36.0" />
+			</font>
+		</Label>
+      <Button layoutX="53.0" layoutY="670.0" mnemonicParsing="false" onAction="#Home" text="Home">
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Button>
+      <SplitPane dividerPositions="0.2412280701754386" layoutX="157.0" layoutY="119.0" prefHeight="513.0" prefWidth="686.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>

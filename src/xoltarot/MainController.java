@@ -43,6 +43,19 @@ public class MainController {
 		window.setScene(scene);
 		window.show();
 	}
+	/**
+	 * 'Help' is the function that loads the stage and scene for the help window. 
+	 * @param event The 'Help' button click. 
+	 * @throws IOException
+	 */
+	@FXML
+	public void Help(ActionEvent event) throws IOException {
+		mainPane = FXMLLoader.load(getClass().getResource("Help.fxml"));															
+		Scene scene = new Scene(mainPane);
+		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		window.setScene(scene);
+		window.show();
+	}
 	//exits application
 	@FXML
 	public void handleExitButtonAction(ActionEvent event) {
