@@ -1,4 +1,4 @@
-package xoltarot;
+package xoltarot.controller;
 
 import java.io.IOException;
 
@@ -14,17 +14,19 @@ import javafx.stage.Stage;
 public class HelpController {
 	@FXML
 	private AnchorPane mainPane5;
-	
+
 	@FXML
-    private Button home;
+	private Button home;
+
 	/**
-	 * 'Home' is the functions that loads the primary stage and scene. 
-	 * @param event The 'Home' button click. 
+	 * 'Home' is the functions that loads the primary stage and scene.
+	 * 
+	 * @param event The 'Home' button click.
 	 * @throws IOException
 	 */
 	@FXML
 	void Home(ActionEvent event) throws IOException {
-		mainPane5 = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		mainPane5 = FXMLLoader.load(getClass().getResource("/xoltarot/view/Main.FXML"));
 		Scene scene = new Scene(mainPane5);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(scene);

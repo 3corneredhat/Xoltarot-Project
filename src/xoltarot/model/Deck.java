@@ -1,4 +1,4 @@
-package application;
+package xoltarot.model;
 
 import java.util.ArrayList;
 
