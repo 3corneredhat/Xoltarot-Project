@@ -123,6 +123,7 @@ public class CardSearchController implements Initializable {
     			Card card = myDeck.deck.get(i);
     	    	Alert a = new Alert(AlertType.INFORMATION);
     	    	a.setTitle("Card Information");
+		a.setResizable(true);
     	    	a.setHeaderText(card.getName());
     	    	a.setContentText(card.getDescription());
     	    	a.showAndWait();
