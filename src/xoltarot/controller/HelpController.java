@@ -1,4 +1,4 @@
-package xoltarot;
+package xoltarot.controller;
 
 import java.io.IOException;
 
@@ -24,7 +24,7 @@ public class HelpController {
 	 */
 	@FXML
 	void Home(ActionEvent event) throws IOException {
-		mainPane5 = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		mainPane5 = FXMLLoader.load(getClass().getResource("/xoltarot/view/Main.FXML"));
 		Scene scene = new Scene(mainPane5);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(scene);

@@ -20,9 +20,10 @@ public class Main extends Application {
 
 	private void showMain() throws IOException {
 		FXMLLoader loader = new FXMLLoader(); 
-		loader.setLocation(Main.class.getResource("Main.fxml"));
+		loader.setLocation(Main.class.getResource("/xoltarot/view/Main.FXML"));
 		mainLayout = loader.load();
 		Scene scene = new Scene(mainLayout); 
+//		scene.getStylesheets().add(getClass().getResource("xoltarot.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="750.0" prefWidth="1000.0"
-	stylesheets="@xoltarot.css" xmlns="http://javafx.com/javafx/8"
+	stylesheets="@../xoltarot.css" xmlns="http://javafx.com/javafx/8"
 	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="xoltarot.MainController">
+	fx:controller="xoltarot.controller.MainController">
 	<children>
 		<Label alignment="CENTER" layoutX="22.0" layoutY="14.0"
-			prefHeight="100.0" prefWidth="963.0" stylesheets="@xoltarot.css"
+			prefHeight="100.0" prefWidth="963.0" stylesheets="@../xoltarot.css"
 			text="Xoltarot">
 			<font>
 				<Font name="Bell MT" size="48.0" />
