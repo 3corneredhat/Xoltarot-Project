@@ -1,0 +1,56 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{ 
+	-fx-background-color: black;
+}
+.button{
+	-fx-text-fill: white;
+	-fx-background-color: dimgray;
+	-fx-focus-color: #ff8c00
+}
+.button:hover {
+    -fx-effect: dropshadow(three-pass-box, #ff8c00, 10.0, 0.0, 0.0, 0.0);
+}
+.button:active{
+	-fx-background-color: #ff8c00;
+}
+.list-view:focused{
+	-fx-background-color: transparent;
+	-fx-effect: dropshadow(three-pass-box, #ff8c00, 10.0, 0.0, 0.0, 0.0);
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #0A65BF ;
+    -fx-text-fill: white;
+}
+
+.list-cell:even { 
+    -fx-background-color: dimgray;
+    -fx-text-fill: white;
+}
+.list-cell:odd { 
+	-fx-background-color: darkgray;
+	-fx-text-fill: white;
+}
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+}
+.label{
+	-fx-background-color: black;
+	-fx-text-fill: white;
+}
+.radio-button {
+    -fx-focus-color: #ff8c00;
+}
+.text-input{
+	-fx-focus-color: transparent;
+	-fx-border-style: none;
+	-fx-background-color: darkgray;
+	-fx-text-fill: white;
+	-fx-control-inner-background: darkgray;
+}
+.text-input:focused{
+	-fx-effect: dropshadow(three-pass-box, #ff8c00, 10.0, 0.0, 0.0, 0.0);
+}
+.text-area:focused{
+	-fx-effect: dropshadow(three-pass-box, #ff8c00, 10.0, 0.0, 0.0, 0.0);
+}
