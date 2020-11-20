@@ -14,12 +14,14 @@ import javafx.stage.Stage;
 public class HelpController {
 	@FXML
 	private AnchorPane mainPane5;
-	
+
 	@FXML
-    private Button home;
+	private Button home;
+
 	/**
-	 * 'Home' is the functions that loads the primary stage and scene. 
-	 * @param event The 'Home' button click. 
+	 * 'Home' is the functions that loads the primary stage and scene.
+	 * 
+	 * @param event The 'Home' button click.
 	 * @throws IOException
 	 */
 	@FXML

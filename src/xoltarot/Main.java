@@ -10,24 +10,24 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	private Stage primaryStage;
 	private static AnchorPane mainLayout;
-	
+
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-			this.primaryStage = primaryStage;
-			this.primaryStage.setTitle("Xoltarot");//title for the application
-			showMain();//shows the main menu	
+		this.primaryStage = primaryStage;
+		this.primaryStage.setTitle("Xoltarot");// title for the application
+		showMain();// shows the main menu
 	}
 
 	private void showMain() throws IOException {
-		FXMLLoader loader = new FXMLLoader(); 
+		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("/xoltarot/view/Main.FXML"));
 		mainLayout = loader.load();
-		Scene scene = new Scene(mainLayout); 
-//		scene.getStylesheets().add(getClass().getResource("xoltarot.css").toExternalForm());
+		Scene scene = new Scene(mainLayout);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
+
 	public static void main(String[] args) {
-		launch(args);//launches the application
+		launch(args);// launches the application
 	}
 }

@@ -13,53 +13,59 @@ import javafx.stage.Stage;
 
 public class MainController {
 	@FXML
-	private AnchorPane mainPane;	
+	private AnchorPane mainPane;
 	@FXML
 	public Button exitButton;
-	//takes user to the "TodayForturne" window
+
+	// takes user to the "TodayForturne" window
 	@FXML
 	public void TodayFort(ActionEvent event) throws IOException {
-		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/TodayFort.fxml"));															
+		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/TodayFort.fxml"));
 		Scene scene = new Scene(mainPane);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(scene);
 		window.show();
 	}
-	//takes user to "Card Search" window
+
+	// takes user to "Card Search" window
 	@FXML
 	public void CardSearch(ActionEvent event) throws IOException {
-		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/CardSearch.fxml"));															
+		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/CardSearch.fxml"));
 		Scene scene = new Scene(mainPane);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(scene);
 		window.show();
 	}
-	//takes user to "My Notes" window
+
+	// takes user to "My Notes" window
 	@FXML
 	public void MyNotes(ActionEvent event) throws IOException {
-		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/MyNotes.fxml"));															
+		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/MyNotes.fxml"));
 		Scene scene = new Scene(mainPane);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(scene);
 		window.show();
 	}
+
 	/**
-	 * 'Help' is the function that loads the stage and scene for the help window. 
-	 * @param event The 'Help' button click. 
+	 * 'Help' is the function that loads the stage and scene for the help window.
+	 * 
+	 * @param event The 'Help' button click.
 	 * @throws IOException
 	 */
 	@FXML
 	public void Help(ActionEvent event) throws IOException {
-		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/Help.fxml"));															
+		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/Help.fxml"));
 		Scene scene = new Scene(mainPane);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(scene);
 		window.show();
 	}
-	//exits application
+
+	// exits application
 	@FXML
 	public void handleExitButtonAction(ActionEvent event) {
-	    Stage stage = (Stage) exitButton.getScene().getWindow();
-	    stage.close();
+		Stage stage = (Stage) exitButton.getScene().getWindow();
+		stage.close();
 	}
 }
