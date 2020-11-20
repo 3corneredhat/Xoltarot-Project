@@ -1,21 +1,23 @@
+package application;
+
 import java.util.ArrayList;
 
 public class Deck {
 
-	public ArrayList<Card> deck;
+	public ArrayList<Card> deck = new ArrayList<Card>();
 	private Card tarotCard;
 	
 	/**
 	 * Creates a deck of tarot cards.
 	 */
-	Deck() {
+	public Deck() {
 
 		tarotCard = new Card("The Fool", "The Fool is a card of new beginnings, " 
 				+ "opportunity and potential. Just like the young man, "
 				+ "you are at the outset of your journey, " 
-				+ "standing at the cliff‘s edge, and about to take "
+				+ "standing at the cliffï¿½s edge, and about to take "
 				+ "your first step into the unknown. Even though you "
-				+ "don’t know exactly where you are going, you are being "
+				+ "donï¿½t know exactly where you are going, you are being "
 				+ "called to commit yourself and follow your heart, no "
 				+ "matter how crazy this leap of faith might seem to you. "
 				+ "Now is a time when you need to trust where the Universe " 
@@ -44,7 +46,7 @@ public class Deck {
 		deck.add(tarotCard);
 
 		tarotCard = new Card("The Empress", "The Empress signifies a strong connection with our femininity. Femininity "
-				+ "translates in many ways – elegance, sensuality, fertility, creative expression, nurturing – and is necessary "
+				+ "translates in many ways ï¿½ elegance, sensuality, fertility, creative expression, nurturing ï¿½ and is necessary "
 				+ "for creating balance in both men and women. The Empress calls on you to connect with your feminine energy. Create "
 				+ "beauty in your life. Connect with your senses through taste, touch, sound, smell and sight. Draw on these senses to "
 				+ "experience pleasure and deep fulfilment. Treat yourself to a day spa, learn massage, enjoy a fine restaurant or spend "
@@ -56,10 +58,10 @@ public class Deck {
 		tarotCard = new Card("The Emperor", "The Emperor represents a powerful leader who demands respect and authority. Status, power and "
 				+ "recognition are essential to you, and you are most comfortable in a leadership role where you can command and direct others. "
 				+ "As a leader, you rule with a firm but fair hand. You have a clear vision of what you want to create, and you organise those"
-				+ " around you to manifest your goal. You listen to the advice of others, but you prefer to have the final say. Conflict doesn’t "
-				+ "scare you, and you won’t hesitate to use your power to protect those you care about. And in return, those people will repay you "
+				+ " around you to manifest your goal. You listen to the advice of others, but you prefer to have the final say. Conflict doesnï¿½t "
+				+ "scare you, and you wonï¿½t hesitate to use your power to protect those you care about. And in return, those people will repay you "
 				+ "with the loyalty and respect you deserve. Claim your authority as leader and influencer and "
-				+ "don’t let others put you down.");
+				+ "donï¿½t let others put you down.");
 		deck.add(tarotCard);
 
 		tarotCard = new Card("The Hierophant","The Hierophant card represents an established set of spiritual values and beliefs and is often "
@@ -83,9 +85,9 @@ public class Deck {
 				+ "you will succeed."); 
 		deck.add(tarotCard);
 		
-		tarotCard = new Card("Strength", "The Strength card represents strength, determination, and power – like the Chariot. However, while the Chariot "
+		tarotCard = new Card("Strength", "The Strength card represents strength, determination, and power ï¿½ like the Chariot. However, while the Chariot "
 				+ "signifies outer strength and will, the Strength card speaks to the inner strength and the human spirit's ability to overcome any obstacle. "
-				+ "Strength is about knowing you can endure life’s obstacles. You have great stamina and persistence, balanced with underlying patience and inner "
+				+ "Strength is about knowing you can endure lifeï¿½s obstacles. You have great stamina and persistence, balanced with underlying patience and inner "
 				+ "calm. You are committed to what you need to do, and you go about it in a way that shows your composure and maturity.");
 		deck.add(tarotCard);
 		
@@ -96,23 +98,23 @@ public class Deck {
 				+ "your authentic self.");
 		deck.add(tarotCard);
 		
-		tarotCard = new Card("The Wheel of Fortune", "The Wheel of Fortune reminds you that the wheel is always turning and life is in a state of constant change. If you’re going "
+		tarotCard = new Card("The Wheel of Fortune", "The Wheel of Fortune reminds you that the wheel is always turning and life is in a state of constant change. If youï¿½re going "
 				+ "through a difficult time rest assured that it will get better from here. Good luck and good fortune will make their return in time. Similarly, if things are "
-				+ "going well, know this, too, will change and life may return to ‘normal’ soon. This cycle shows why it is so important to cherish the blissful moments in your "
-				+ "life and make the most of them while they are within reach – because in a flash they could be gone.");
+				+ "going well, know this, too, will change and life may return to ï¿½normalï¿½ soon. This cycle shows why it is so important to cherish the blissful moments in your "
+				+ "life and make the most of them while they are within reach ï¿½ because in a flash they could be gone.");
 		deck.add(tarotCard);
 		
 		tarotCard = new Card("Justice" , "The Justice card represents justice, fairness, truth and the law. You are being called to account for your actions and will be judged "
-				+ "accordingly. If you have acted in alignment with your Higher Self and for the greater good of others, you have nothing to worry about. However, if you haven’t,"
-				+ " you will be called out and made to own up to your actions. If this has you shaking in your boots, know that the Justice card isn’t as black and white as you "
+				+ "accordingly. If you have acted in alignment with your Higher Self and for the greater good of others, you have nothing to worry about. However, if you havenï¿½t,"
+				+ " you will be called out and made to own up to your actions. If this has you shaking in your boots, know that the Justice card isnï¿½t as black and white as you "
 				+ "may think. A level of compassion and understanding accompany Justice, and although you may have done something you regret, this card suggests that you will be "
 				+ "treated fairly and without bias. Be ready to take responsibility for your actions and stand accountable for the ensuing consequences.");
 		deck.add(tarotCard);
 		
 		tarotCard = new Card("The Hanged Man", "The Hanged Man reminds you that sometimes you have to put everything on hold before you can take the next step, or the Universe "
-				+ "will do it on your behalf (and it may not always be at the most convenient time!). You may have heard the saying, ‘What got you here won’t get you there’, and "
+				+ "will do it on your behalf (and it may not always be at the most convenient time!). You may have heard the saying, ï¿½What got you here wonï¿½t get you thereï¿½, and "
 				+ "that indeed is at play in this card. The Hanged Man calls you to release the old mental models and behavioural patterns that no longer serve you so you can see "
-				+ "your world from a new perspective and embrace new opportunities that would have otherwise been hidden from you if you didn’t hit the brakes.");
+				+ "your world from a new perspective and embrace new opportunities that would have otherwise been hidden from you if you didnï¿½t hit the brakes.");
 		deck.add(tarotCard);
 		
 		tarotCard = new Card("Death", "After a period of pause and reflection with the Hanged Man, the Death card symbolises the end of a major phase or aspect of your life that you "
@@ -123,7 +125,7 @@ public class Deck {
 		deck.add(tarotCard);
 		
 		tarotCard = new Card("Temperance", "Temperance is the card for bringing balance, patience and moderation into your life. You are being invited to stabilise your energy and "
-				+ "to allow the life force to flow through you without force or resistance. It’s time to recover your flow and get your life back into order and balance.");
+				+ "to allow the life force to flow through you without force or resistance. Itï¿½s time to recover your flow and get your life back into order and balance.");
 		deck.add(tarotCard);
 		
 		tarotCard = new Card("The Devil", "The Devil card represents your shadow (or darker) side and the negative forces that constrain you and hold you back from being the best "
@@ -133,9 +135,9 @@ public class Deck {
 				+ "soul to the devil!");
 		deck.add(tarotCard);
 		
-		tarotCard = new Card("The Tower", "When the Tower card appears in a Tarot reading, expect the unexpected – massive change, upheaval, destruction and chaos. It may be a divorce, "
+		tarotCard = new Card("The Tower", "When the Tower card appears in a Tarot reading, expect the unexpected ï¿½ massive change, upheaval, destruction and chaos. It may be a divorce, "
 				+ "death of a loved one, financial failure, health problems, natural disaster, job loss or any event that shakes you to your core, affecting you spiritually, mentally and "
-				+ "physically. There’s no escaping it. Change is here to tear things up, create chaos and destroy everything in its path (but trust me, it’s for your Highest Good).");
+				+ "physically. Thereï¿½s no escaping it. Change is here to tear things up, create chaos and destroy everything in its path (but trust me, itï¿½s for your Highest Good).");
 		deck.add(tarotCard);
 		
 		tarotCard = new Card("The Star", "As the Star follows the Tower card in the Tarot, it comes as a welcome reprieve after a period of destruction and turmoil. You have endured many "
@@ -147,12 +149,12 @@ public class Deck {
 		tarotCard = new Card("The Moon", "The Moon represents your fears and illusions and often comes out when you are projecting fear into your present and your future, based on your past "
 				+ "experiences. You may have a painful memory that caused emotional distress, and rather than dealing with the emotions you pushed them down deep into your subconscious. Now, "
 				+ "these emotions are making a reappearance, and you may find yourself under their influence on a conscious or subconscious level. For example, if you had a car accident when "
-				+ "you were young but didn’t deal with the emotions, you may get sad or anxious every time you get into the backseat of a car. To remedy this, connect with your subconscious "
+				+ "you were young but didnï¿½t deal with the emotions, you may get sad or anxious every time you get into the backseat of a car. To remedy this, connect with your subconscious "
 				+ "mind and release any fears or anxieties holding you back. Hypnosis, therapy and shamanic healing can support this process.");
 		deck.add(tarotCard);
 		
 		tarotCard = new Card("The Sun", "The Sun represents success, radiance and abundance. The Sun gives you strength and tells you that no matter where you go or what you do, your positive "
-				+ "and radiant energy will follow you and bring you happiness and joy. People are drawn to you because you can always see the bright side and bring such warmth into other people’s "
+				+ "and radiant energy will follow you and bring you happiness and joy. People are drawn to you because you can always see the bright side and bring such warmth into other peopleï¿½s "
 				+ "lives. This beautiful, warm energy is what will get you through the tough times and help you succeed. You are also in a position where you can share your highest qualities and "
 				+ "achievements with others. Radiate who you are and what you stand for; shine your love on those you care about.");
 		deck.add(tarotCard);
