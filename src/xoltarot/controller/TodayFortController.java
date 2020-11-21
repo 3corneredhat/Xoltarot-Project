@@ -1,7 +1,7 @@
 package xoltarot.controller;
 
 import java.io.IOException;
-
+import xoltarot.model.Deck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +15,9 @@ import javafx.stage.Stage;
 public class TodayFortController {
 	@FXML
 	private AnchorPane mainPane2;
+	
+	private Deck TarotCards = new Deck(); 
+	private String topic;
 	//takes the user from the Today's Fortune window to the main menu
 	@FXML
 	void Home(ActionEvent event) throws IOException {
@@ -31,6 +34,10 @@ public class TodayFortController {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setContentText("Your fortune is being saved");
 		alert.showAndWait();
+	}
+	
+	public void setPassedValue(String t) {
+		topic = t; 
 	}
 	//When the generate my fortune button is pressed, three "cards" should be displayed
 	//for now it alerts the user that their fortune is being generated
