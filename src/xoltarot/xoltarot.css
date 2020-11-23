@@ -1,4 +1,3 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 .root{ 
 	-fx-background-color: black;
 }
@@ -18,7 +17,7 @@
 	-fx-effect: dropshadow(three-pass-box, #ff8c00, 10.0, 0.0, 0.0, 0.0);
 }
 .list-cell:filled:selected:focused, .list-cell:filled:selected {
-    -fx-background-color: #0A65BF ;
+    -fx-background-color: #4B0082 ;
     -fx-text-fill: white;
 }
 
@@ -31,7 +30,7 @@
 	-fx-text-fill: white;
 }
 .list-cell:filled:hover {
-    -fx-background-color: #0093ff;
+    -fx-background-color: #9370DB;
     -fx-text-fill: white;
 }
 .label{

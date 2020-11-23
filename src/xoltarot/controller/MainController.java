@@ -1,11 +1,13 @@
 package xoltarot.controller;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Optional;
-import xoltarot.controller.TodayFortController;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -13,7 +15,7 @@ import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class MainController {
+public class MainController implements Initializable{
 	@FXML
 	private AnchorPane mainPane;
 	@FXML
@@ -27,21 +29,23 @@ public class MainController {
 	 */
 	@FXML
 	public void TodayFort(ActionEvent event) throws IOException {
-		TextInputDialog dialog = new TextInputDialog("Love");
+		TextInputDialog dialog = new TextInputDialog("Love, Finance, Career, etc.");
 		dialog.setTitle("Today's Fortune");
 		dialog.setHeaderText("What is your inquiry?");
-		dialog.setContentText("Please enter a topic:");
+		dialog.setContentText("Please enter one topic:");
 
 		// Traditional way to get the response value.
 		Optional<String> topic = dialog.showAndWait();
 		if (topic.isPresent()){
 		    System.out.println("Your topic: " + topic.get());
-		    TodayFortController.setPassedValue(topic.get());
 		}
 		else
 			return;
 		
-		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/TodayFort.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/xoltarot/view/TodayFort.fxml"));
+		mainPane = loader.load();
+		TodayFortController fortune = loader.getController();
+		fortune.setPassedValue(topic.get());
 		Scene scene = new Scene(mainPane);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(scene);
@@ -88,5 +92,11 @@ public class MainController {
 	public void handleExitButtonAction(ActionEvent event) {
 		Stage stage = (Stage) exitButton.getScene().getWindow();
 		stage.close();
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 }

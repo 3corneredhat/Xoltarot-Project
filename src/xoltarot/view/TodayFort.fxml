@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
@@ -8,35 +10,59 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1000.0"
-	stylesheets="@../xoltarot.css" xmlns="http://javafx.com/javafx/8"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="xoltarot.controller.TodayFortController">
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@../xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.controller.TodayFortController">
 	<children>
-		<Label alignment="CENTER" layoutX="22.0" layoutY="14.0"
-			prefHeight="100.0" prefWidth="963.0" stylesheets="@../xoltarot.css"
-			text="Today's Fortune">
+		<Label alignment="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="100.0" prefWidth="963.0" stylesheets="@../xoltarot.css" text="Today's Fortune">
 			<font>
 				<Font name="Bell MT" size="36.0" />
 			</font>
 		</Label>
-		<Button layoutX="53.0" layoutY="670.0" mnemonicParsing="false"
-			onAction="#Home" text="Home">
+		<Button layoutX="53.0" layoutY="670.0" mnemonicParsing="false" onAction="#Home" text="Home">
 			<padding>
 				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 			</padding>
 		</Button>
-		<Button layoutX="419.0" layoutY="670.0" mnemonicParsing="false"
-			onAction="#genFort" text="Give me my fortune">
+		<Button layoutX="428.0" layoutY="670.0" mnemonicParsing="false" onAction="#genFort" text="Give me my fortune">
 			<padding>
 				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 			</padding>
 		</Button>
-		<Button layoutX="864.0" layoutY="670.0" mnemonicParsing="false"
-			onAction="#saveFort" text="Save Fortune">
+		<Button layoutX="864.0" layoutY="670.0" mnemonicParsing="false" onAction="#saveFort" text="Save Fortune">
 			<padding>
 				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 			</padding>
 		</Button>
+      <HBox fx:id="dealerCards" alignment="CENTER" layoutX="135.0" layoutY="130.0" prefHeight="340.0" prefWidth="730.0">
+         <children>
+            <StackPane fx:id="past" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Rectangle fx:id="rec1" arcHeight="5.0" arcWidth="5.0" fill="INDIGO" height="300.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Text fx:id="pa" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </StackPane>
+            <StackPane fx:id="present" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Rectangle fx:id="rec2" arcHeight="5.0" arcWidth="5.0" fill="INDIGO" height="300.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+                     <StackPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </StackPane.margin>
+                  </Rectangle>
+                  <Text fx:id="pe" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="future" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Rectangle fx:id="rec3" arcHeight="5.0" arcWidth="5.0" fill="INDIGO" height="300.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+                     <StackPane.margin>
+                        <Insets left="10.0" />
+                     </StackPane.margin>
+                  </Rectangle>
+                  <Text fx:id="fu" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </StackPane>
+         </children></HBox>
 	</children>
 </AnchorPane>
