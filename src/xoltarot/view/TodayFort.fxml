@@ -36,7 +36,7 @@
          <children>
             <Button fx:id="draw" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#genFort" prefHeight="220.0" prefWidth="150.0">
                <graphic>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
                </graphic>
                <HBox.margin>
                   <Insets right="80.0" />
@@ -49,30 +49,30 @@
             </TextArea>
          </children>
       </HBox>
-      <HBox fx:id="dealerCards" alignment="CENTER_LEFT" layoutX="139.0" layoutY="409.0" prefHeight="240.0" prefWidth="730.0">
+      <HBox fx:id="dealerCards" alignment="CENTER" layoutX="139.0" layoutY="411.0" prefHeight="240.0" prefWidth="730.0">
          <children>
-            <Button fx:id="past" mnemonicParsing="false" onAction="#showPastDescription" prefHeight="220.0" prefWidth="150.0">
+            <Button fx:id="past" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showPastDescription" prefHeight="220.0" prefWidth="150.0" HBox.hgrow="NEVER">
                <graphic>
-                  <ImageView fx:id="image1" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="image1" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
                </graphic>
                <HBox.margin>
-                  <Insets left="40.0" right="20.0" />
+                  <Insets />
                </HBox.margin>
             </Button>
-            <Button fx:id="present" mnemonicParsing="false" onAction="#showPresentDescription" prefHeight="220.0" prefWidth="150.0">
+            <Button fx:id="present" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showPresentDescription" prefHeight="220.0" prefWidth="150.0" HBox.hgrow="NEVER">
                <graphic>
-                  <ImageView fx:id="image2" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="image2" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
                </graphic>
                <HBox.margin>
                   <Insets left="80.0" right="80.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="future" mnemonicParsing="false" onAction="#showFutureDescription" prefHeight="220.0" prefWidth="150.0">
+            <Button fx:id="future" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showFutureDescription" prefHeight="220.0" prefWidth="150.0" HBox.hgrow="NEVER">
                <graphic>
-                  <ImageView fx:id="image3" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="image3" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
                </graphic>
                <HBox.margin>
-                  <Insets left="20.0" />
+                  <Insets />
                </HBox.margin>
             </Button>
          </children></HBox>

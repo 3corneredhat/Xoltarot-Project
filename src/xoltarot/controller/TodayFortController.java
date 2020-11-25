@@ -107,7 +107,7 @@ public class TodayFortController {
 		fortune.put("Future", cardThree.getNum());
 
 		// Loads the image, resizes it, keeps the proportions, among others things.
-		i0 = new Image(getClass().getResourceAsStream("/xoltarot/images/deck.jpg"), 150, 220, true, true);
+		i0 = new Image(getClass().getResourceAsStream("/xoltarot/images/deck.png"), 150, 220, true, true);
 		i1 = new Image(
 				getClass().getResourceAsStream("/xoltarot/images/".concat(String.valueOf(cardOne.getNum()) + ".jpg")),
 				150, 220, true, true);
