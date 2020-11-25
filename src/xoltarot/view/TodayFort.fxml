@@ -12,6 +12,21 @@
 
 <AnchorPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@../xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.controller.TodayFortController">
 	<children>
+      <Label layoutX="237.0" layoutY="383.0" text="Past">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="383.0" text="Present">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="728.0" layoutY="383.0" text="Future">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
 		<Label alignment="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="100.0" prefWidth="963.0" stylesheets="@../xoltarot.css" text="Today's Fortune">
 			<font>
 				<Font name="Bell MT" size="36.0" />
@@ -32,14 +47,14 @@
 				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 			</padding>
 		</Button>
-      <HBox alignment="CENTER_LEFT" layoutX="114.0" layoutY="135.0" prefHeight="240.0" prefWidth="780.0">
+      <HBox alignment="CENTER_LEFT" layoutX="114.0" layoutY="128.0" prefHeight="240.0" prefWidth="810.0">
          <children>
-            <Button fx:id="draw" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#genFort" prefHeight="220.0" prefWidth="150.0">
+            <Button fx:id="draw" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#genFort" prefHeight="240.0" prefWidth="170.0">
                <graphic>
                   <ImageView nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
                </graphic>
                <HBox.margin>
-                  <Insets right="80.0" />
+                  <Insets right="90.0" />
                </HBox.margin>
             </Button>
             <TextArea fx:id="description" prefHeight="200.0" prefWidth="375.0">
@@ -51,7 +66,7 @@
       </HBox>
       <HBox fx:id="dealerCards" alignment="CENTER" layoutX="139.0" layoutY="411.0" prefHeight="240.0" prefWidth="730.0">
          <children>
-            <Button fx:id="past" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showPastDescription" prefHeight="220.0" prefWidth="150.0" HBox.hgrow="NEVER">
+            <Button fx:id="past" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showPastDescription" prefHeight="240.0" prefWidth="170.0" HBox.hgrow="NEVER">
                <graphic>
                   <ImageView fx:id="image1" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -59,7 +74,7 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button fx:id="present" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showPresentDescription" prefHeight="220.0" prefWidth="150.0" HBox.hgrow="NEVER">
+            <Button fx:id="present" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showPresentDescription" prefHeight="240.0" prefWidth="170.0" HBox.hgrow="NEVER">
                <graphic>
                   <ImageView fx:id="image2" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -67,7 +82,7 @@
                   <Insets left="80.0" right="80.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="future" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showFutureDescription" prefHeight="220.0" prefWidth="150.0" HBox.hgrow="NEVER">
+            <Button fx:id="future" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showFutureDescription" prefHeight="240.0" prefWidth="170.0" HBox.hgrow="NEVER">
                <graphic>
                   <ImageView fx:id="image3" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
                </graphic>
