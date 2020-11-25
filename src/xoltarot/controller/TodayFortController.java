@@ -50,6 +50,7 @@ public class TodayFortController {
 	private Text fu; //future
 	
 	private String topic; //not yet implemented
+	
 	private String cardOne;
 	private String cardTwo;
 	private String cardThree;
@@ -74,6 +75,11 @@ public class TodayFortController {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setContentText("Your fortune is being saved");
 		alert.showAndWait();
+		
+		/**
+		 * TO-DO: take the 'fortune' information and the topic then 
+		 * write it to a file. 
+		 */
 	}
 	
 	/**
@@ -81,9 +87,9 @@ public class TodayFortController {
 	 * Proceeds to generate the first fortune.
 	 * @param t The topic of the inquiry.
 	 */
-	public void setPassedValue(String t) {
+	public void setPassedValue(String topic) {
 		
-		topic = t; 
+		this.topic = topic; 
 		
 		Deck deck = new Deck();
 		deck.shuffleCards();
@@ -130,21 +136,26 @@ public class TodayFortController {
 		
 		this.topic = topic.get();
 		
+		//Removes the image/name
 		past.getChildren().remove(pa);
 		present.getChildren().remove(pe);
 		future.getChildren().remove(fu);
 		
-		
+		//
 		Deck deck = new Deck();
 		deck.shuffleCards();
+		
+		//Saves the names of the cards.
 		cardOne = deck.getCardName(0);
 		cardTwo = deck.getCardName(1);
 		cardThree = deck.getCardName(2);
 		
+		//Sets the text of the Cards.
 		pa = new Text(cardOne); 
 		pe = new Text(cardTwo); 
 		fu = new Text(cardThree); 
 		
+		//Adds text to the StackPane objects.
 		past.getChildren().addAll(pa);
 		present.getChildren().addAll(pe);
 		future.getChildren().addAll(fu);
