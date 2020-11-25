@@ -3,9 +3,6 @@ package xoltarot.controller;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Optional;
-
-import xoltarot.model.Card;
-import xoltarot.model.Deck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,15 +17,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import xoltarot.model.Card;
+import xoltarot.model.Deck;
 
 public class TodayFortController {
 	@FXML
 	private AnchorPane mainPane2;
-
 	@FXML
 	private Button draw;
 	@FXML
@@ -83,10 +78,9 @@ public class TodayFortController {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setContentText("Your fortune is being saved");
 		alert.showAndWait();
-
-		/**
-		 * TO-DO: take the 'fortune' information and the topic then write it to a file.
-		 */
+		
+		//TO-DO: take the 'fortune' information and the topic then write it to a file.
+		 
 	}
 
 	/**
