@@ -22,7 +22,7 @@
 				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 			</padding>
 		</Button>
-		<Button layoutX="428.0" layoutY="670.0" mnemonicParsing="false" onAction="#genFort" text="Give me my fortune">
+		<Button layoutX="446.0" layoutY="670.0" mnemonicParsing="false" onAction="#newFort" text="New Fortune">
 			<padding>
 				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 			</padding>
@@ -32,37 +32,49 @@
 				<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 			</padding>
 		</Button>
-      <HBox fx:id="dealerCards" alignment="CENTER" layoutX="135.0" layoutY="130.0" prefHeight="340.0" prefWidth="730.0">
+      <HBox alignment="CENTER_LEFT" layoutX="114.0" layoutY="135.0" prefHeight="240.0" prefWidth="780.0">
          <children>
-            <StackPane fx:id="past" prefHeight="150.0" prefWidth="200.0">
-               <children>
-                  <Rectangle fx:id="rec1" arcHeight="5.0" arcWidth="5.0" fill="INDIGO" height="300.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <Text fx:id="pa" strokeType="OUTSIDE" strokeWidth="0.0" />
-               </children>
+            <Button fx:id="draw" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#genFort" prefHeight="220.0" prefWidth="150.0">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true" />
+               </graphic>
                <HBox.margin>
-                  <Insets right="10.0" />
+                  <Insets right="80.0" />
                </HBox.margin>
-            </StackPane>
-            <StackPane fx:id="present" prefHeight="150.0" prefWidth="200.0">
-               <children>
-                  <Rectangle fx:id="rec2" arcHeight="5.0" arcWidth="5.0" fill="INDIGO" height="300.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
-                     <StackPane.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </StackPane.margin>
-                  </Rectangle>
-                  <Text fx:id="pe" strokeType="OUTSIDE" strokeWidth="0.0" />
-               </children>
-            </StackPane>
-            <StackPane fx:id="future" prefHeight="150.0" prefWidth="200.0">
-               <children>
-                  <Rectangle fx:id="rec3" arcHeight="5.0" arcWidth="5.0" fill="INDIGO" height="300.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
-                     <StackPane.margin>
-                        <Insets left="10.0" />
-                     </StackPane.margin>
-                  </Rectangle>
-                  <Text fx:id="fu" strokeType="OUTSIDE" strokeWidth="0.0" />
-               </children>
-            </StackPane>
+            </Button>
+            <TextArea fx:id="description" prefHeight="200.0" prefWidth="375.0">
+               <HBox.margin>
+                  <Insets left="175.0" />
+               </HBox.margin>
+            </TextArea>
+         </children>
+      </HBox>
+      <HBox fx:id="dealerCards" alignment="CENTER_LEFT" layoutX="139.0" layoutY="409.0" prefHeight="240.0" prefWidth="730.0">
+         <children>
+            <Button fx:id="past" mnemonicParsing="false" onAction="#showPastDescription" prefHeight="220.0" prefWidth="150.0">
+               <graphic>
+                  <ImageView fx:id="image1" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="40.0" right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="present" mnemonicParsing="false" onAction="#showPresentDescription" prefHeight="220.0" prefWidth="150.0">
+               <graphic>
+                  <ImageView fx:id="image2" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="80.0" right="80.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="future" mnemonicParsing="false" onAction="#showFutureDescription" prefHeight="220.0" prefWidth="150.0">
+               <graphic>
+                  <ImageView fx:id="image3" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
          </children></HBox>
 	</children>
 </AnchorPane>
