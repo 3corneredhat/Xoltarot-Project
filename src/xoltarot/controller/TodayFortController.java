@@ -1,8 +1,12 @@
 package xoltarot.controller;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Optional;
+import java.util.Properties;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -75,12 +79,25 @@ public class TodayFortController {
 	@FXML
 	private void saveFort(ActionEvent event) {
 
+		// TO-DO: take the 'fortune' information and the topic then write it to a file.
+
+		try (OutputStream output = new FileOutputStream("resources/pastfortune.properties")) {
+
+			Properties prop = new Properties();
+
+			prop.setProperty("Inquiry", this.topic);
+			prop.setProperty("Past", String.valueOf(cardOne.getNum()));
+			prop.setProperty("Present", String.valueOf(cardTwo.getNum()));
+			prop.setProperty("Future", String.valueOf(cardThree.getNum()));
+			prop.store(output, null);
+
+		} catch (IOException io) {
+			io.printStackTrace();
+		}
+
 		Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setContentText("Your fortune is being saved");
+		alert.setContentText("Your fortune has been saved");
 		alert.showAndWait();
-		
-		//TO-DO: take the 'fortune' information and the topic then write it to a file.
-		 
 	}
 
 	/**
@@ -180,15 +197,15 @@ public class TodayFortController {
 	 */
 	@FXML
 	private void genFort(ActionEvent event) {
-		
+
 		image1.setImage(null);
 		image2.setImage(null);
 		image3.setImage(null);
-		
+
 		// Clears and sets new text in the TextArea.
 		description.clear();
 		description.setText("The card description will be shown here once selected.");
-		
+
 		// Removes the image/name.
 
 		// Create new deck and shuffle.
