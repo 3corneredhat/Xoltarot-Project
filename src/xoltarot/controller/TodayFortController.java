@@ -1,6 +1,5 @@
 package xoltarot.controller;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -129,7 +128,8 @@ public class TodayFortController {
 		fortune.put("Future", cardThree.getNum());
 
 		// Loads the image, resizes it, keeps the proportions, among others things.
-		i0 = new Image(getClass().getResourceAsStream("/xoltarot/images/deck.png"), 150, 220, true, true);
+		i0 = new Image(getClass().getResourceAsStream("/xoltarot/images/deck.png"), 150, 220, true, true); //image for the deck.
+		
 		i1 = new Image(
 				getClass().getResourceAsStream("/xoltarot/images/".concat(String.valueOf(cardOne.getNum()) + ".jpg")),
 				150, 220, true, true);

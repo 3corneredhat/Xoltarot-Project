@@ -181,15 +181,29 @@ public class Deck {
 	public Card getCard(int pos) {
 		return deck.get(pos);
 	}
+	/**
+	 * Shuffles the deck of cards.
+	 */
 	public void shuffleCards() {
 
 		Collections.shuffle(deck);
 
 	}
+	/**
+	 * Returns the card name of the card at the given
+	 * index.
+	 * @param n The index.
+	 * @return The card name. 
+	 */
 	public String getCardName(int n) {
 		Card card = deck.get(n); 
 		return card.getName();
 	}
+	/**
+	 * 
+	 * @param n
+	 * @return
+	 */
 	public Integer getCardNum(int n) {
 		Card card = deck.get(n); 
 		return card.getNum();
