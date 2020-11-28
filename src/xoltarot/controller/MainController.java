@@ -51,8 +51,10 @@ public class MainController implements Initializable {
 			alert.showAndWait();
 			return;
 		}
+		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/xoltarot/view/TodayFort.fxml"));
 		mainPane = loader.load();
+		
 		// Loads the Today's Fortune Controller in order to use the setPassedValue function.
 		TodayFortController fortune = loader.getController();
 		fortune.setPassedValue(topic.get());
