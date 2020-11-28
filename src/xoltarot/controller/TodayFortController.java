@@ -1,5 +1,6 @@
 package xoltarot.controller;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -74,15 +75,18 @@ public class TodayFortController {
 		window.show();
 	}
 
-	// when the save button is pressed it should save the displayed fortune
-	// for now it alerts the user that their fortune is being saved
+	/**
+	 * This method saves the topic of the inquiry and the number values of the
+	 * cards in the fortune. 
+	 * @param event The click of the 'Save Fortune' button. 
+	 */
 	@FXML
-	private void saveFort(ActionEvent event) {
+	private void saveFort(ActionEvent event){
 
 		// TO-DO: take the 'fortune' information and the topic then write it to a file.
+		
 
-		try (OutputStream output = new FileOutputStream("resources/pastfortune.properties")) {
-
+		try (OutputStream output = new FileOutputStream("pastfortune.properties",true)) {
 			Properties prop = new Properties();
 
 			prop.setProperty("Inquiry", this.topic);
@@ -95,7 +99,7 @@ public class TodayFortController {
 			io.printStackTrace();
 		}
 
-		Alert alert = new Alert(AlertType.CONFIRMATION);
+		Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setContentText("Your fortune has been saved");
 		alert.showAndWait();
 	}
@@ -107,7 +111,10 @@ public class TodayFortController {
 	 * @param t The topic of the inquiry.
 	 */
 	public void setPassedValue(String topic) {
-
+		
+		if(topic.contains(" ")) {
+			return;
+		}
 		this.topic = topic;
 
 		Deck deck = new Deck();
