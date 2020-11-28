@@ -76,17 +76,15 @@ public class TodayFortController {
 	}
 
 	/**
-	 * This method saves the topic of the inquiry and the number values of the
-	 * cards in the fortune. 
-	 * @param event The click of the 'Save Fortune' button. 
+	 * This method saves the topic of the inquiry and the number values of the cards
+	 * in the fortune.
+	 * 
+	 * @param event The click of the 'Save Fortune' button.
 	 */
 	@FXML
-	private void saveFort(ActionEvent event){
+	private void saveFort(ActionEvent event) {
 
-		// TO-DO: take the 'fortune' information and the topic then write it to a file.
-		
-
-		try (OutputStream output = new FileOutputStream("pastfortune.properties",true)) {
+		try (OutputStream output = new FileOutputStream("pastfortune.properties", true)) {
 			Properties prop = new Properties();
 
 			prop.setProperty("Inquiry", this.topic);
@@ -111,8 +109,8 @@ public class TodayFortController {
 	 * @param t The topic of the inquiry.
 	 */
 	public void setPassedValue(String topic) {
-		
-		if(topic.contains(" ")) {
+
+		if (topic.contains(" ")) {
 			return;
 		}
 		this.topic = topic;
