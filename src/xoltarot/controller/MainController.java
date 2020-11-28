@@ -17,7 +17,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class MainController implements Initializable {
+public class MainController {
 	@FXML
 	private AnchorPane mainPane;
 	@FXML
@@ -105,11 +105,5 @@ public class MainController implements Initializable {
 	public void handleExitButtonAction(ActionEvent event) {
 		Stage stage = (Stage) exitButton.getScene().getWindow();
 		stage.close();
-	}
-
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-
 	}
 }

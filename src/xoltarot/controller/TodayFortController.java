@@ -1,15 +1,10 @@
 package xoltarot.controller;
 
-//import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-//import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Optional;
-//import java.util.Properties;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -60,14 +55,17 @@ public class TodayFortController {
 	@FXML
 	private TextArea description;
 
-	private String topic; // not yet implemented, to be used in file output
+	private String topic;
 
 	private Card cardOne;
 	private Card cardTwo;
 	private Card cardThree;
-	private HashMap<String, Integer> fortune = new HashMap<>();
 
-	// takes the user from the Today's Fortune window to the main menu
+	/**
+	 * Home returns the user to the main stage. 
+	 * @param event The click of the 'Home' button.
+	 * @throws IOException
+	 */
 	@FXML
 	void Home(ActionEvent event) throws IOException {
 		mainPane2 = FXMLLoader.load(getClass().getResource("/xoltarot/view/Main.fxml"));
@@ -78,48 +76,33 @@ public class TodayFortController {
 	}
 
 	/**
-	 * This method saves the topic of the inquiry and the number values of the cards
-	 * in the fortune.
+	 * This method saves the topic of the inquiry and the generated fortune.
 	 * 
 	 * @param event The click of the 'Save Fortune' button.
 	 */
-//	@FXML
-//	private void saveFort(ActionEvent event) {
-//
-//		try (OutputStream output = new FileOutputStream("pastfortune.properties", true)) {
-//			Properties prop = new Properties();
-//
-//			prop.setProperty("Inquiry", this.topic);
-//			prop.setProperty("Past", String.valueOf(cardOne.getNum()));
-//			prop.setProperty("Present", String.valueOf(cardTwo.getNum()));
-//			prop.setProperty("Future", String.valueOf(cardThree.getNum()));
-//			prop.store(output, null);
-//
-//		} catch (IOException io) {
-//			io.printStackTrace();
-//		}
-//
-//		Alert alert = new Alert(AlertType.INFORMATION);
-//		alert.setContentText("Your fortune has been saved");
-//		alert.showAndWait();
-//	}
-	// when the save button is pressed it should save the displayed fortune
-	// for now it alerts the user that their fortune is being saved
 	@FXML
 	private void saveFort(ActionEvent event) throws IOException {
-		// makes new text file that contains "topic"/inquiry and the three card
-		// generated called "PastFortunes.txt"
+		
+		/**
+		 *  makes new text file that contains "topic"/inquiry and the three card
+		 *  generated called "PastFortunes.txt"
+		 */
 		FileWriter outfile = new FileWriter("PastFortunes.txt", true);
-		// writes the date of which the fortune was saved, the inquiry of "topic" and
-		// the names of the three cards generated
+		
+		/**
+		 *  writes the date of which the fortune was saved, the inquiry of "topic" and
+		 *  the names of the three cards generated
+		 */
 		PrintWriter data = new PrintWriter(outfile);
 		Date date = new Date();
-		data.write(date.toString() + "\r\n" + topic + " \r\n");
-		data.write(cardOne.getName() + ", " + cardTwo.getName() + ", " + cardThree.getName() + " " + "\r\n");
+		data.write(date.toString() + "\r\nTopic: " + topic + " \r\n");
+		data.write("Past: " + cardOne.getName() + ", Present: "+ cardTwo.getName() 
+		+ ", Future: " + cardThree.getName() + " " + "\r\n");
 		data.close();
+		
 		// Alerts user that the fortune data is being saved
-		Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setContentText("Your fortune is being saved");
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setContentText("Your fortune has been saved.");
 		alert.showAndWait();
 	}
 
@@ -127,13 +110,10 @@ public class TodayFortController {
 	 * Stores the initial inquiry after requesting a fortune. Proceeds to generate
 	 * the first fortune.
 	 * 
-	 * @param t The topic of the inquiry.
+	 * @param topic The topic of the inquiry.
 	 */
 	public void setPassedValue(String topic) {
 
-		if (topic.contains(" ")) {
-			return;
-		}
 		this.topic = topic;
 
 		Deck deck = new Deck();
@@ -143,11 +123,6 @@ public class TodayFortController {
 		cardOne = deck.getCard(0);
 		cardTwo = deck.getCard(1);
 		cardThree = deck.getCard(2);
-
-		// Puts the card in the array
-		fortune.put("Past", cardOne.getNum());
-		fortune.put("Present", cardTwo.getNum());
-		fortune.put("Future", cardThree.getNum());
 
 		// Loads the image, resizes it, keeps the proportions, among others things.
 		i0 = new Image(getClass().getResourceAsStream("/xoltarot/images/deck.png"), 150, 220, true, true); // image for
@@ -200,7 +175,6 @@ public class TodayFortController {
 
 		Optional<String> topic = dialog.showAndWait();
 		if (topic.isPresent()) {
-			System.out.println("Your topic: " + topic.get());
 		} else
 			return;
 
@@ -234,8 +208,6 @@ public class TodayFortController {
 		description.clear();
 		description.setText("The card description will be shown here once selected.");
 
-		// Removes the image/name.
-
 		// Create new deck and shuffle.
 		Deck deck = new Deck();
 		deck.shuffleCards();
@@ -244,11 +216,6 @@ public class TodayFortController {
 		cardOne = deck.getCard(0);
 		cardTwo = deck.getCard(1);
 		cardThree = deck.getCard(2);
-
-		// Sets the text of the Cards.
-		fortune.put("Past", cardOne.getNum());
-		fortune.put("Present", cardTwo.getNum());
-		fortune.put("Future", cardThree.getNum());
 
 		// Loads the image, resizes it, keeps the proportions, among others things.
 		i1 = new Image(
