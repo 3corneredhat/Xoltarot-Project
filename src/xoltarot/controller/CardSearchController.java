@@ -19,7 +19,10 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class CardSearchController implements Initializable {
@@ -39,6 +42,12 @@ public class CardSearchController implements Initializable {
 
 	@FXML
 	private ListView<String> cards;
+	
+	@FXML
+	private ImageView imageDisplay = new ImageView();;
+	
+	@FXML
+	private Image pic;  
 
 	ArrayList<String> cardList = new ArrayList<String>();
 	ArrayList<String> searchList = new ArrayList<String>();
@@ -107,6 +116,9 @@ public class CardSearchController implements Initializable {
 		Deck myDeck = new Deck();
 		// Finds index number of selected item on ListView
 		int selected = cards.getSelectionModel().getSelectedIndex();
+		if(selected == -1){
+			return;
+		}
 		String cardName;
 		// If no search term has been selected, searches default ArrayList
 		if (searchList.size() == 0) {
@@ -121,6 +133,8 @@ public class CardSearchController implements Initializable {
 			matcher = pattern.matcher(cardList.get(i));
 			if (matcher.find()) {
 				Card card = myDeck.deck.get(i);
+				pic = new Image( getClass().getResourceAsStream("/xoltarot/images/".concat(String.valueOf(card.getNum()) + ".jpg")), 150, 220, true, true);
+				imageDisplay.setImage(pic);
 				Alert a = new Alert(AlertType.INFORMATION);
 				a.setTitle("Card Information");
 				a.setResizable(true);
