@@ -1,10 +1,11 @@
 .root{ 
-	-fx-background-color: black;
+	-fx-background-color: #7F2A87;
 }
 .button{
-	-fx-text-fill: white;
-	-fx-background-color: dimgray;
-	-fx-focus-color: #ff8c00
+	-fx-background-radius:10;
+	-fx-text-fill:  #7F3E98;
+	-fx-background-color: #EEB714;
+	-fx-focus-color: #B63277
 }
 .button:hover {
     -fx-effect: dropshadow(three-pass-box, #ff8c00, 10.0, 0.0, 0.0, 0.0);
@@ -16,11 +17,11 @@
 	-fx-background-color: transparent;
 	-fx-effect: dropshadow(three-pass-box, #ff8c00, 10.0, 0.0, 0.0, 0.0);
 }
+
 .list-cell:filled:selected:focused, .list-cell:filled:selected {
     -fx-background-color: #4B0082 ;
     -fx-text-fill: white;
 }
-
 .list-cell:even { 
     -fx-background-color: dimgray;
     -fx-text-fill: white;
@@ -34,8 +35,9 @@
     -fx-text-fill: white;
 }
 .label{
-	-fx-background-color: black;
-	-fx-text-fill: white;
+	-fx-background-radius:10;
+	-fx-background-color: #472158;
+	-fx-text-fill:  white;
 }
 .radio-button {
     -fx-focus-color: #ff8c00;

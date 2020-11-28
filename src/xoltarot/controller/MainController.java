@@ -77,8 +77,8 @@ public class MainController implements Initializable {
 
 	// takes user to "My Notes" window
 	@FXML
-	public void MyNotes(ActionEvent event) throws IOException {
-		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/MyNotes.fxml"));
+	public void PastFortune(ActionEvent event) throws IOException {
+		mainPane = FXMLLoader.load(getClass().getResource("/xoltarot/view/PastFortune.fxml"));
 		Scene scene = new Scene(mainPane);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		window.setScene(scene);

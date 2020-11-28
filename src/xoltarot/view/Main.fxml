@@ -8,16 +8,36 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@../xoltarot.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xoltarot.controller.MainController">
+<AnchorPane prefHeight="750.0" prefWidth="1000.0"
+	stylesheets="@../xoltarot.css" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="xoltarot.controller.MainController">
 	<children>
-		<Label alignment="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="100.0" prefWidth="963.0" stylesheets="@../xoltarot.css" text="Xoltarot">
+		<Label alignment="CENTER" layoutX="22.0" layoutY="14.0"
+			prefHeight="100.0" prefWidth="963.0" 
+			stylesheets="@../xoltarot.css" text="Xoltarot">
 			<font>
 				<Font name="Bell MT" size="48.0" />
 			</font>
 		</Label>
-		<VBox layoutX="393.0" layoutY="127.0" prefHeight="615.0" prefWidth="215.0">
+		<AnchorPane layoutX="19.0" layoutY="127.0"
+			prefHeight="610.0" prefWidth="963.0"
+			style="-fx-background-color: #7F3E98; -fx-background-radius: 10;">
 			<children>
-				<Button mnemonicParsing="false" onAction="#TodayFort" prefHeight="68.0" prefWidth="175.0" text="Today's Fortune">
+				<ImageView fitHeight="211.0" fitWidth="318.0"
+					layoutX="43.0" layoutY="54.0" pickOnBounds="true"
+					preserveRatio="true">
+					<image>
+						<Image url="@/xoltarot/images//two_cards.png" />
+					</image>
+				</ImageView>
+			</children>
+		</AnchorPane>
+		<VBox layoutX="354.0" layoutY="126.0" prefHeight="610.0"
+			prefWidth="300.0">
+			<children>
+				<Button mnemonicParsing="false" onAction="#TodayFort"
+					prefHeight="68.0" prefWidth="258.0" text="Today's Fortune">
 					<padding>
 						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 					</padding>
@@ -28,7 +48,9 @@
 						<Font size="18.0" />
 					</font>
 				</Button>
-				<Button layoutX="10.0" layoutY="40.0" mnemonicParsing="false" onAction="#CardSearch" prefHeight="68.0" prefWidth="175.0" text="Card Search">
+				<Button layoutX="10.0" layoutY="40.0" mnemonicParsing="false"
+					onAction="#CardSearch" prefHeight="68.0" prefWidth="258.0"
+					text="Card Search">
 					<padding>
 						<Insets bottom="20.0" left="36.0" right="36.0" top="20.0" />
 					</padding>
@@ -39,18 +61,9 @@
 						<Font size="18.0" />
 					</font>
 				</Button>
-				<Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false" onAction="#MyNotes" prefHeight="68.0" prefWidth="175.0" text="Past Fortune">
-					<padding>
-						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-					</padding>
-					<VBox.margin>
-						<Insets left="20.0" top="60.0" />
-					</VBox.margin>
-					<font>
-						<Font size="18.0" />
-					</font>
-				</Button>
-				<Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false" onAction="#Help" prefHeight="68.0" prefWidth="175.0" text="Help">
+				<Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false"
+					onAction="#PastFortune" prefHeight="68.0" prefWidth="258.0"
+					text="Past Fortunes ">
 					<padding>
 						<Insets bottom="20.0" left="48.0" right="48.0" top="20.0" />
 					</padding>
@@ -61,7 +74,22 @@
 						<Font size="18.0" />
 					</font>
 				</Button>
-				<Button fx:id="exitButton" cancelButton="true" layoutX="30.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="68.0" prefWidth="175.0" text="Exit">
+				<Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false"
+					onAction="#Help" prefHeight="68.0" prefWidth="258.0" text="Help">
+					<padding>
+						<Insets bottom="20.0" left="48.0" right="48.0" top="20.0" />
+					</padding>
+					<VBox.margin>
+						<Insets left="20.0" top="60.0" />
+					</VBox.margin>
+					<font>
+						<Font size="18.0" />
+					</font>
+				</Button>
+				<Button fx:id="exitButton" cancelButton="true" layoutX="30.0"
+					layoutY="249.0" mnemonicParsing="false"
+					onAction="#handleExitButtonAction" prefHeight="68.0"
+					prefWidth="258.0" text="Exit">
 					<font>
 						<Font size="18.0" />
 					</font>

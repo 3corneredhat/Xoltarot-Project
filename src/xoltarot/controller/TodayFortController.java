@@ -1,11 +1,14 @@
 package xoltarot.controller;
 
-import java.io.FileOutputStream;
+//import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
+//import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Optional;
-import java.util.Properties;
+//import java.util.Properties;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -80,24 +83,43 @@ public class TodayFortController {
 	 * 
 	 * @param event The click of the 'Save Fortune' button.
 	 */
+//	@FXML
+//	private void saveFort(ActionEvent event) {
+//
+//		try (OutputStream output = new FileOutputStream("pastfortune.properties", true)) {
+//			Properties prop = new Properties();
+//
+//			prop.setProperty("Inquiry", this.topic);
+//			prop.setProperty("Past", String.valueOf(cardOne.getNum()));
+//			prop.setProperty("Present", String.valueOf(cardTwo.getNum()));
+//			prop.setProperty("Future", String.valueOf(cardThree.getNum()));
+//			prop.store(output, null);
+//
+//		} catch (IOException io) {
+//			io.printStackTrace();
+//		}
+//
+//		Alert alert = new Alert(AlertType.INFORMATION);
+//		alert.setContentText("Your fortune has been saved");
+//		alert.showAndWait();
+//	}
+	// when the save button is pressed it should save the displayed fortune
+	// for now it alerts the user that their fortune is being saved
 	@FXML
-	private void saveFort(ActionEvent event) {
-
-		try (OutputStream output = new FileOutputStream("pastfortune.properties", true)) {
-			Properties prop = new Properties();
-
-			prop.setProperty("Inquiry", this.topic);
-			prop.setProperty("Past", String.valueOf(cardOne.getNum()));
-			prop.setProperty("Present", String.valueOf(cardTwo.getNum()));
-			prop.setProperty("Future", String.valueOf(cardThree.getNum()));
-			prop.store(output, null);
-
-		} catch (IOException io) {
-			io.printStackTrace();
-		}
-
-		Alert alert = new Alert(AlertType.INFORMATION);
-		alert.setContentText("Your fortune has been saved");
+	private void saveFort(ActionEvent event) throws IOException {
+		// makes new text file that contains "topic"/inquiry and the three card
+		// generated called "PastFortunes.txt"
+		FileWriter outfile = new FileWriter("PastFortunes.txt", true);
+		// writes the date of which the fortune was saved, the inquiry of "topic" and
+		// the names of the three cards generated
+		PrintWriter data = new PrintWriter(outfile);
+		Date date = new Date();
+		data.write(date.toString() + "\r\n" + topic + " \r\n");
+		data.write(cardOne.getName() + ", " + cardTwo.getName() + ", " + cardThree.getName() + " " + "\r\n");
+		data.close();
+		// Alerts user that the fortune data is being saved
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setContentText("Your fortune is being saved");
 		alert.showAndWait();
 	}
 
@@ -128,8 +150,9 @@ public class TodayFortController {
 		fortune.put("Future", cardThree.getNum());
 
 		// Loads the image, resizes it, keeps the proportions, among others things.
-		i0 = new Image(getClass().getResourceAsStream("/xoltarot/images/deck.png"), 150, 220, true, true); //image for the deck.
-		
+		i0 = new Image(getClass().getResourceAsStream("/xoltarot/images/deck.png"), 150, 220, true, true); // image for
+																											// the deck.
+
 		i1 = new Image(
 				getClass().getResourceAsStream("/xoltarot/images/".concat(String.valueOf(cardOne.getNum()) + ".jpg")),
 				150, 220, true, true);
