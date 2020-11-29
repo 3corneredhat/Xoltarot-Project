@@ -1,3 +1,6 @@
+/**
+ * The Card class used to represent a card object. 
+ */
 package xoltarot.model;
 public class Card {
 	

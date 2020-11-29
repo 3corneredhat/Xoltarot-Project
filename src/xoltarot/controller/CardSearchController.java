@@ -1,3 +1,6 @@
+/**
+ * The controller for the Card Search function. 
+ */
 package xoltarot.controller;
 
 import java.io.IOException;

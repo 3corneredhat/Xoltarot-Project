@@ -1,5 +1,7 @@
+/**
+ * The controller for the Today's Fortune Function
+ */
 package xoltarot.controller;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;

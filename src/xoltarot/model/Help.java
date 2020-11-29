@@ -1,3 +1,6 @@
+/**
+ * The class that hold the information used in the help functionality.
+ */
 package xoltarot.model;
 
 import java.util.HashMap;

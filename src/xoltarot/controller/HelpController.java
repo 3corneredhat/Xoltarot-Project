@@ -1,3 +1,6 @@
+/**
+ * The controller for the Help function.
+ */
 package xoltarot.controller;
 
 import java.io.IOException;

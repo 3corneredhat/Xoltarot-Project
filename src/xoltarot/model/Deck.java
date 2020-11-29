@@ -1,3 +1,6 @@
+/**
+ * The Deck class that is made up of Card objects.
+ */
 package xoltarot.model;
 
 import java.util.ArrayList;
@@ -181,6 +184,7 @@ public class Deck {
 	public Card getCard(int pos) {
 		return deck.get(pos);
 	}
+	
 	/**
 	 * Shuffles the deck of cards.
 	 */
@@ -189,6 +193,7 @@ public class Deck {
 		Collections.shuffle(deck);
 
 	}
+	
 	/**
 	 * Returns the card name of the card at the given
 	 * index.
@@ -199,15 +204,18 @@ public class Deck {
 		Card card = deck.get(n); 
 		return card.getName();
 	}
+	
 	/**
-	 * 
-	 * @param n
-	 * @return
+	 * Gets the associated number with the card at 
+	 * the given index.
+	 * @param n The index.
+	 * @return The card number.
 	 */
 	public Integer getCardNum(int n) {
 		Card card = deck.get(n); 
 		return card.getNum();
 	}
+	
 	/**
 	 * @return Returns the deck object for manipulation in other classes.
 	 */
