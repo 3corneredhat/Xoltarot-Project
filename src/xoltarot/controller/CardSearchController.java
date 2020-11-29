@@ -28,7 +28,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class CardSearchController implements Initializable {
-
+//Declaraton of FXML items for use throughout card search
 	@FXML
 	private AnchorPane mainPane3;
 	// takes the user from the card search window to the main menu
@@ -53,7 +53,8 @@ public class CardSearchController implements Initializable {
 
 	ArrayList<String> cardList = new ArrayList<String>();
 	ArrayList<String> searchList = new ArrayList<String>();
-
+	
+	//Reference list for initial display on Listview
 	private void makeList(ArrayList<String> cardList) {
 		cardList.add("0: The Fool");
 		cardList.add("1: The Magician");
@@ -83,6 +84,7 @@ public class CardSearchController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// Creating "cardList" as reference for full deck of cards.
 		makeList(cardList);
+		//Displaying information to ListView
 		for (int i = 0; i < cardList.size(); i++) {
 			cards.getItems().add(cardList.get(i));
 		}
@@ -118,6 +120,7 @@ public class CardSearchController implements Initializable {
 		Deck myDeck = new Deck();
 		// Finds index number of selected item on ListView
 		int selected = cards.getSelectionModel().getSelectedIndex();
+		//Checks if nothing was selected and does nothing if so
 		if(selected == -1){
 			return;
 		}
@@ -132,7 +135,9 @@ public class CardSearchController implements Initializable {
 		Matcher matcher;
 		// Setting "i" to matched position in cardList
 		for (int i = 0; i < cardList.size(); i++) {
+			//Searching cardList for matched term retrieved by selecting ListView
 			matcher = pattern.matcher(cardList.get(i));
+			//Displaying information and picture to screen
 			if (matcher.find()) {
 				Card card = myDeck.deck.get(i);
 				pic = new Image( getClass().getResourceAsStream("/xoltarot/images/".concat(String.valueOf(card.getNum()) + ".jpg")), 150, 220, true, true);
@@ -149,7 +154,7 @@ public class CardSearchController implements Initializable {
 	}
 
 	@FXML
-	void Home(ActionEvent event) throws IOException {
+	void Home(ActionEvent event) throws IOException { //Button to return to home screen
 		mainPane3 = FXMLLoader.load(getClass().getResource("/xoltarot/view/Main.FXML"));
 		Scene scene = new Scene(mainPane3);
 		Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
