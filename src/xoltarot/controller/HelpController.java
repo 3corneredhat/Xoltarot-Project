@@ -16,7 +16,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import xoltarot.model.Help; 
+import xoltarot.model.Help;
+
 public class HelpController implements Initializable {
 	@FXML
 	private AnchorPane mainPane5;
@@ -26,14 +27,14 @@ public class HelpController implements Initializable {
 
 	@FXML
 	private ListView<String> helpList;
-	
+
 	@FXML
 	private TextArea description;
-	
-	private Help help = new Help(); 
-	
+
+	private Help help = new Help();
+
 	/***
-	 * 
+	 * Initializes the ListView.
 	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -41,24 +42,30 @@ public class HelpController implements Initializable {
 		helpList.getItems().add("Today's Fortune");
 		helpList.getItems().add("Card Search");
 		helpList.getItems().add("Past Fortunes");
-    
 
 	}
-	 public void handleMouseClick(MouseEvent event) {
-         int selection = helpList.getSelectionModel().getSelectedIndex();
-         description.setWrapText(true);
-         
-         if (selection == 0) {
-        	 description.setText(help.getDescription(selection)); 
-         }
-         if (selection == 1) {
-        	 description.setText(help.getDescription(selection)); 
-         }
-         if (selection == 2) {
-        	 description.setText(help.getDescription(selection)); 
-         }
-     }
 	
+	/**
+	 * Handles the mouse click of an item in the ListView: loads the
+	 * associated description.
+	 * 
+	 * @param event The click of the mouse. 
+	 */
+	public void handleMouseClick(MouseEvent event) {
+
+		int selection = helpList.getSelectionModel().getSelectedIndex();
+		description.setWrapText(true);
+
+		if (selection == 0) {
+			description.setText(help.getDescription(selection));
+		}
+		if (selection == 1) {
+			description.setText(help.getDescription(selection));
+		}
+		if (selection == 2) {
+			description.setText(help.getDescription(selection));
+		}
+	}
 
 	/**
 	 * 'Home' is the functions that loads the primary stage and scene.
